@@ -235,10 +235,10 @@ export default function App() {
       <main className="mx-auto max-w-6xl px-5 py-8">
         <Tabs defaultValue="home">
           <TabsList className="grid w-full grid-cols-4">
-            <TabsTrigger value="home" className="text-black hover:text-black hover:scale-105 transition transform">Home</TabsTrigger>
-            <TabsTrigger value="about" className="text-black hover:text-black hover:scale-105 transition transform">About me</TabsTrigger>
-            <TabsTrigger value="papers" className="text-black hover:text-black hover:scale-105 transition transform">Papers</TabsTrigger>
-            <TabsTrigger value="talks" className="text-black hover:text-black hover:scale-105 transition transform">Talks</TabsTrigger>
+            <TabsTrigger value="home" className="text-black hover:text-black hover:scale-105 transition transform data-[state=active]:text-blue-600 data-[state=active]:font-bold">Home</TabsTrigger>
+            <TabsTrigger value="about" className="text-black hover:text-black hover:scale-105 transition transform data-[state=active]:text-blue-600 data-[state=active]:font-bold">About me</TabsTrigger>
+            <TabsTrigger value="papers" className="text-black hover:text-black hover:scale-105 transition transform data-[state=active]:text-blue-600 data-[state=active]:font-bold">Papers</TabsTrigger>
+            <TabsTrigger value="talks" className="text-black hover:text-black hover:scale-105 transition transform data-[state=active]:text-blue-600 data-[state=active]:font-bold">Talks</TabsTrigger>
           </TabsList>
 
           {/* HOME */}
