@@ -465,7 +465,7 @@ export default function App() {
           <TabsContent value="talks" className="mt-6">
             <Card>
               <CardHeader>
-                <CardTitle>Talks</CardTitle>
+                <CardTitle>Domestic Presentations</CardTitle>
               </CardHeader>
               <CardContent>
                 {TALKS.map((t, i) => (
