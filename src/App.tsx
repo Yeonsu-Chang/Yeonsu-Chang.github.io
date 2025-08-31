@@ -18,8 +18,6 @@ import { Mail, FileText, ExternalLink, Menu } from "lucide-react";
 const LINKS = {
   email: "mailto:yeonsu@hanyang.ac.kr",
   cv: "/Yeonsu_CV.pdf", // public/Yeonsu_CV.pdf 에 파일 넣어두기
-  scholar: "https://scholar.google.com/",
-  github: "https://github.com/",
 };
 
 const PROFILE = {
@@ -218,16 +216,6 @@ export default function App() {
               <DropdownMenuItem asChild>
                 <a href={LINKS.cv} target="_blank" rel="noreferrer">
                   <FileText className="mr-2 h-4 w-4" /> CV (PDF)
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <a href={LINKS.scholar} target="_blank" rel="noreferrer">
-                  Google Scholar
-                </a>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <a href={LINKS.github} target="_blank" rel="noreferrer">
-                  GitHub
                 </a>
               </DropdownMenuItem>
             </DropdownMenuContent>
