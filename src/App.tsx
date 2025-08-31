@@ -342,7 +342,7 @@ export default function App() {
 
 
                 <div className="mt-4 flex gap-3">
-                  <Button asChild>
+                  <Button asChild variant="outline">
                     <a href={LINKS.cv} target="_blank" rel="noreferrer">
                       <FileText className="mr-2 h-4 w-4" />
                       Download CV
