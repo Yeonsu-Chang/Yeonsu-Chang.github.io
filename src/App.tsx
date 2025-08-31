@@ -288,7 +288,7 @@ export default function App() {
 
                 <div className="space-y-2">
                   <div>
-                    Email:{" "}
+                    <span className="font-medium">Email:{" "}</span>
                     <a className="underline" href={LINKS.email}>
                       yeonsu@hanyang.ac.kr
                     </a>
@@ -306,7 +306,8 @@ export default function App() {
                     </a>
                   </div>
 
-                <div>Advisor:{" "}
+                <div>
+                  <span className="font-medium">Advisor:{" "}</span>
                   <a href={PROFILE.advisorUrl}
                     target="_blank"
                     rel="noreferrer"
@@ -465,7 +466,7 @@ export default function App() {
           <TabsContent value="talks" className="mt-6">
             <Card>
               <CardHeader>
-                <CardTitle>Domestic Presentations</CardTitle>
+                <CardTitle>Presentations</CardTitle>
               </CardHeader>
               <CardContent>
                 {TALKS.map((t, i) => (
