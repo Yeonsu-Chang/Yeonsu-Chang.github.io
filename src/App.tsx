@@ -212,17 +212,17 @@ export default function App() {
               <DropdownMenuLabel>Quick actions</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuItem asChild>
-                <a href={LINKS.email} className="text-gray-300 hover:text-white hover:scale-105 transition transform">
+                <a href={LINKS.email} className="text-black hover:text-white hover:scale-105 transition transform">
                   <Mail className="mr-2 h-4 w-4" /> Email
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href={LINKS.cv} target="_blank" rel="noreferrer" className="text-gray-300 hover:text-white hover:scale-105 transition transform">
+                <a href={LINKS.cv} target="_blank" rel="noreferrer" className="text-black hover:text-white hover:scale-105 transition transform">
                   <FileText className="mr-2 h-4 w-4" /> CV (PDF)
                 </a>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <a href={LINKS.googlescholar} target="_blank" rel="noreferrer" className="text-gray-300 hover:text-white hover:scale-105 transition transform">
+                <a href={LINKS.googlescholar} target="_blank" rel="noreferrer" className="text-black hover:text-white hover:scale-105 transition transform">
                   <FileText className="mr-2 h-4 w-4" /> Google Scholar
                 </a>
               </DropdownMenuItem>
@@ -235,10 +235,10 @@ export default function App() {
       <main className="mx-auto max-w-6xl px-5 py-8">
         <Tabs defaultValue="home">
           <TabsList className="grid w-full grid-cols-4">
-            <TabsTrigger value="home" className="text-gray-300 hover:text-white hover:scale-105 transition transform">Home</TabsTrigger>
-            <TabsTrigger value="about" className="text-gray-300 hover:text-white hover:scale-105 transition transform">About me</TabsTrigger>
-            <TabsTrigger value="papers" className="text-gray-300 hover:text-white hover:scale-105 transition transform">Papers</TabsTrigger>
-            <TabsTrigger value="talks" className="text-gray-300 hover:text-white hover:scale-105 transition transform">Talks</TabsTrigger>
+            <TabsTrigger value="home" className="text-black hover:text-white hover:scale-105 transition transform">Home</TabsTrigger>
+            <TabsTrigger value="about" className="text-black hover:text-white hover:scale-105 transition transform">About me</TabsTrigger>
+            <TabsTrigger value="papers" className="text-black hover:text-white hover:scale-105 transition transform">Papers</TabsTrigger>
+            <TabsTrigger value="talks" className="text-black hover:text-white hover:scale-105 transition transform">Talks</TabsTrigger>
           </TabsList>
 
           {/* HOME */}
