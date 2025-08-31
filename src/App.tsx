@@ -17,7 +17,7 @@ import { Mail, FileText, ExternalLink, Menu } from "lucide-react";
 
 const LINKS = {
   email: "mailto:yeonsu@hanyang.ac.kr",
-  cv: "/Yeonsu_CV-2.pdf", // public/Yeonsu_CV-2.pdf 에 파일 넣어두기
+  cv: "/Yeonsu_CV.pdf", // public/Yeonsu_CV-2.pdf 에 파일 넣어두기
   scholar: "https://scholar.google.com/",
   github: "https://github.com/",
 };
