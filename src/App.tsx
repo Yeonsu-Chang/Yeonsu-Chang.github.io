@@ -14,7 +14,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Mail, FileText, ExternalLink, Menu } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const LINKS = {
   email: "mailto:yeonsu@hanyang.ac.kr",
@@ -186,9 +185,9 @@ export default function App() {
           <div className="flex items-center gap-3">
             <div className="h-8 w-8 rounded-xl bg-gray-200" /> {/* 로고 박스는 밝은 회색 */}
             <div className="leading-tight">
-              <Link to="/" className="font-semibold hover:opacity-80">
+              <a href="/" className="font-semibold hover:opacity-80">
                 {PROFILE.name}
-              </Link>
+              </a>
               <div className="text-[12px] text-gray-400">{PROFILE.title}</div>
             </div>
           </div>
