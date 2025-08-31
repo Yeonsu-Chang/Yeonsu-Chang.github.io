@@ -22,7 +22,7 @@ const LINKS = {
 };
 
 const PROFILE = {
-  name: "Yeonsu Chang",
+  name: "Yeonsu Chang (장연수)",
   title: "Integrated Ph.D Candidate",
   dept: "Department of Mathematics, Hanyang University",
   location: "Room 735, Building 507, Hanyang University, 222, Wangsimni-ro, Seongdong-gu, Seoul, 04763, Republic of Korea",
@@ -279,7 +279,7 @@ export default function App() {
               </CardHeader>
               <CardContent className="text-sm">
                 <div className="leading-relaxed text-slate-700">
-                  Hello, I,m Yeonsu Chang(장연수). 
+                  Hello, I,m Yeonsu Chang (장연수). 
                   I am an Integrated Ph.D student in mathematics at Hanyang University advised by {PROFILE.advisor}. 
                   My research interests lie in structural graph theory and parameterized algorithms. 
                   In particular, my current research focuses on problems related to reduced parameters and &chi;-boundedness.
