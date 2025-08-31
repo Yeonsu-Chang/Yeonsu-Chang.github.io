@@ -397,7 +397,7 @@ export default function App() {
                     <div className="text-slate-500 text-sm">Fall 2024</div>
                   </li>
                   <li>
-                    <div>Linear Algebra 1(MAT 2023), Differential Geometry(MAT 4005)</div>
+                    <div>Linear Algebra 1 (MAT 2023), Differential Geometry (MAT 4005)</div>
                     <div className="text-slate-500 text-sm">Spring 2024</div>
                   </li>
                   <li>
