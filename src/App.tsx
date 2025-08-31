@@ -142,7 +142,7 @@ function PublicationList({ papers }: { papers: any[] }) {
             </div>
             {/* 저자 (내 이름만 검정색) */}
             <div className="text-sm text-slate-600 mb-1">
-              {p.authors.split(/(Yeonsu Chang)/g).map((part, j) =>
+              {p.authors.split(/(Yeonsu Chang)/g).map((part: string, j: number) =>
                 part === "Yeonsu Chang" ? (
                   <span key={j} className="text-black">
                     {part}
