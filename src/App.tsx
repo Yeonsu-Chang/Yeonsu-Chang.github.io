@@ -244,16 +244,13 @@ export default function App() {
           {/* HOME */}
           <TabsContent value="home" className="mt-6 grid gap-6 lg:grid-cols-3">
             {/* 왼쪽: 사진 영역 (16:9 비율) */}
-            {/*
             <Card className="lg:col-span-1">
               <CardHeader>
                 <CardTitle>Photo</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="relative w-full overflow-hidden rounded-xl border bg-slate-100">
-                */}
                   {/* 16:9 비율 고정 */}
-                  {/*
                   <div className="aspect-video w-full">
                     <img
                       src="/profile.jpg"    // public/profile.jpg 에 사진 넣으면 자동 표시됨
@@ -265,23 +262,19 @@ export default function App() {
                         if (holder) holder.style.display = "flex";
                       }}
                     />
-                    */}
                     {/* 이미지 없을 때 플레이스홀더 */}
-                    {/*
                     <div
                       id="photo-placeholder"
                       className="absolute inset-0 hidden items-center justify-center text-slate-400"
                     >
-                      <div className="text-center">
-                        <div className="text-sm">Put your photo at</div>
-                        <div className="font-mono text-xs">/public/profile.jpg</div>
+                      <div className="text-center text-slate-500">
+                        <div className="text-sm">This space is reserved for a future portrait.</div>
                       </div>
                     </div>
                   </div>
                 </div>
               </CardContent>
-            </Card>
-            */}         
+            </Card>         
 
             {/* 오른쪽: 프로필 카드 */}
             <Card className="lg:col-span-2">
