@@ -80,9 +80,22 @@ const PREPRINTS = [
 
 const TALKS = [
   {
+    when: "Nov 4, 2024",
+    where: "Math Colloquium at Hanyang University",
+    title: "Combinatorial game and graph structure: cops and robber game and flipper game",
+  },
+  {
     when: "Oct 26–28, 2023",
     where: "2023 KMS Annual Meeting",
     title: "A characterization of graphs of radius-r flip-width at most 2",
+  },
+];
+
+const UPCOMINGTALKS = [
+  {
+    when: "Oct 22-24, 2025",
+    where: "2025 KMS Annual Meeting",
+    title: "Structural and Algorithmic properties of Reduced Component Max-Leaf",
   },
 ];
 
@@ -475,6 +488,21 @@ export default function App() {
               </CardHeader>
               <CardContent>
                 {TALKS.map((t, i) => (
+                  <div key={i} className="mb-3 text-sm">
+                    <div className="font-medium">{t.where}</div>
+                    <div className="text-slate-600">{t.when}</div>
+                    <div>{t.title}</div>
+                  </div>
+                ))}
+              </CardContent>
+            </Card>
+
+            <Card className="mt-6">
+              <CardHeader>
+                <CardTitle>Upcoming talks</CardTitle>
+              </CardHeader>
+              <CardContent>
+                {UPCOMINGTALKS.map((t, i) => (
                   <div key={i} className="mb-3 text-sm">
                     <div className="font-medium">{t.where}</div>
                     <div className="text-slate-600">{t.when}</div>
