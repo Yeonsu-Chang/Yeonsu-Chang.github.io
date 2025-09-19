@@ -488,11 +488,11 @@ export default function App() {
               </CardHeader>
               <CardContent>
                 {TALKS.map((t, i) => (
-                  <div key={i} className="mb-3 text-sm">
+                  <li key={i} className="mb-3 text-sm">
                     <div className="font-medium">{t.where}</div>
                     <div className="text-slate-600">{t.when}</div>
                     <div>{t.title}</div>
-                  </div>
+                  </li>
                 ))}
               </CardContent>
             </Card>
@@ -503,11 +503,11 @@ export default function App() {
               </CardHeader>
               <CardContent>
                 {UPCOMINGTALKS.map((t, i) => (
-                  <div key={i} className="mb-3 text-sm">
+                  <li key={i} className="mb-3 text-sm">
                     <div className="font-medium">{t.where}</div>
                     <div className="text-slate-600">{t.when}</div>
                     <div>{t.title}</div>
-                  </div>
+                  </li>
                 ))}
               </CardContent>
             </Card>
