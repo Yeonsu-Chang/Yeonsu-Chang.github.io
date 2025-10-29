@@ -80,6 +80,11 @@ const PREPRINTS = [
 
 const TALKS = [
   {
+    when: "Oct 22-24, 2025",
+    where: "2025 KMS Annual Meeting",
+    title: "Structural and Algorithmic properties of Reduced Component Max-Leaf",
+  },
+  {
     when: "Nov 4, 2024",
     where: "Math Colloquium at Hanyang University",
     title: "Combinatorial game and graph structure: cops and robber game and flipper game",
@@ -92,10 +97,10 @@ const TALKS = [
 ];
 
 const UPCOMINGTALKS = [
-  {
-    when: "Oct 22-24, 2025",
-    where: "2025 KMS Annual Meeting",
-    title: "Structural and Algorithmic properties of Reduced Component Max-Leaf",
+{
+    when: "",
+    where: "",
+    title: "",
   },
 ];
 
