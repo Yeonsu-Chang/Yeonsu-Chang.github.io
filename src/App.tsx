@@ -274,11 +274,11 @@ export default function App() {
               <CardContent>
                 <div className="relative w-full overflow-hidden rounded-xl border bg-slate-100">
                   {/* 16:9 비율 고정 */}
-                  <div className="aspect-video w-full">
+                  <div className="relative aspect-video w-full">
                     <img
                       src="/profile.jpg"    // public/profile.jpg 에 사진 넣으면 자동 표시됨
                       alt="Profile"
-                      className="h-full w-full object-contain bg-slate-100"
+                      className="absolute h-full w-full object-contain bg-slate-100"
                       onError={(e) => {
                         (e.currentTarget as HTMLImageElement).style.display = "none";
                         const holder = document.getElementById("photo-placeholder");
@@ -290,7 +290,7 @@ export default function App() {
                       id="photo-placeholder"
                       className="absolute inset-0 hidden items-center justify-center text-slate-400"
                     >
-                      <div className="text-center text-slate-500">
+                      <div className="text-center">
                         <div className="text-sm">This space is reserved for a future portrait.</div>
                       </div>
                     </div>
