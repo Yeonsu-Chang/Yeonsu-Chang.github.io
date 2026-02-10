@@ -274,7 +274,7 @@ export default function App() {
               <CardContent>
                 <div className="relative w-full overflow-hidden rounded-xl border bg-slate-100">
                   {/* 16:9 비율 고정 */}
-                  <div className="relative aspect-video w-full">
+                  <div className="relative aspect-[4/5] w-full">
                     <img
                       src="/profile.jpg"    // public/profile.jpg 에 사진 넣으면 자동 표시됨
                       alt="Profile"
