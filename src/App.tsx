@@ -278,7 +278,7 @@ export default function App() {
                     <img
                       src="/profile.jpg"    // public/profile.jpg 에 사진 넣으면 자동 표시됨
                       alt="Profile"
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-contain bg-slate-100"
                       onError={(e) => {
                         (e.currentTarget as HTMLImageElement).style.display = "none";
                         const holder = document.getElementById("photo-placeholder");
