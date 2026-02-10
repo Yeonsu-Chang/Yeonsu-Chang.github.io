@@ -70,15 +70,20 @@ const CONF = [
 const PREPRINTS = [
   {
     authors:
-      "",
+      "Shenwei Huang, Yidong Zhou, and Yeonsu Chang",
     title:
-      "",
+      "The optimal chromatic bound for even-hole-free graphs without induced seven-vertex paths",
     venue: "",
-    link: "",
+    link: "https://doi.org/10.48550/arXiv.2602.04403",
   },
 ];
 
 const TALKS = [
+  {
+    when: "Feb 2-6, 2026",
+    where: "Korean Student Combinatorics Workshop 2026 Winter (KSCW2026W)",
+    title: "Structural and Algorithmic properties of Reduced Component Max-Leaf",
+  },
   {
     when: "Oct 22-24, 2025",
     where: "2025 KMS Annual Meeting",
@@ -301,7 +306,7 @@ export default function App() {
               </CardHeader>
               <CardContent className="text-sm">
                 <div className="leading-relaxed text-slate-700">
-                  Hello, I,m Yeonsu Chang (장연수). 
+                  Hello, I'm Yeonsu Chang (장연수). 
                   I am an Integrated Ph.D student in mathematics at Hanyang University advised by {PROFILE.advisor}. 
                   My research interests lie in structural graph theory and parameterized algorithms. 
                   In particular, my current research focuses on problems related to reduced parameters and &chi;-boundedness.
