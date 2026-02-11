@@ -42,7 +42,8 @@ const JOURNAL = [
   {
     authors: "Yeonsu Chang, O-joung Kwon, and Myounghwan Lee",
     title: "A new width parameter of graphs based on edge cuts: α-edge-crossing width",
-    venue: "Discrete Applied Mathematics 380, WG23 (accepted)",
+    venue: "Discrete Applied Mathematics 380",
+    conference: " WG23 (accepted)",
     date: "Feb, 2026",
     link: "https://doi.org/10.48550/arXiv.2302.04624",
   },
@@ -135,6 +136,11 @@ function Publication({ p }: { p: any }) {
         {p.venue}
         {p.date ? `, ${p.date}` : ""}
       </div>
+        {p.conference && (
+        <div className="text-sm text-slate-400">
+        {p.conference}
+      </div>
+      )}
       {/* 링크 (문자 그대로, 검정색) */}
       {p.link && (
         <a
