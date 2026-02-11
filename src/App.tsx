@@ -40,6 +40,13 @@ const PROFILE = {
 
 const JOURNAL = [
   {
+    authors: "Yeonsu Chang, O-joung Kwon, and Myounghwan Lee",
+    title: "A new width parameter of graphs based on edge cuts: α-edge-crossing width",
+    venue: "Discrete Applied Mathematics 380, WG23 (accepted)",
+    date: "Feb, 2026",
+    link: "https://doi.org/10.48550/arXiv.2302.04624",
+  },
+  {
     authors: "Yeonsu Chang, Sejin Ko, O-joung Kwon, and Myounghwan Lee",
     title: "A characterization of graphs of radius-r flip-width at most 2",
     venue: "Discrete Mathematics 348(4)",
@@ -47,13 +54,7 @@ const JOURNAL = [
     link: "https://doi.org/10.48550/arXiv.2306.15206",
     note: "114366",
   },
-  {
-    authors: "Yeonsu Chang, O-joung Kwon, and Myounghwan Lee",
-    title: "A new width parameter of graphs based on edge cuts: α-edge-crossing width",
-    venue: "Discrete Applied Mathematics 380, WG23 (accepted)",
-    date: "Feb, 2026",
-    link: "https://doi.org/10.48550/arXiv.2302.04624",
-  },
+  
 ];
 
 const CONF = [
