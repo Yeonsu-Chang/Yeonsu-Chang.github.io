@@ -186,6 +186,12 @@ function PublicationList({ papers }: { papers: any[] }) {
               {p.venue}
               {p.date ? `, ${p.date}` : ""}
             </div>
+            {/* conference */}
+            {p.conference && (
+              <div className="text-xs text-slate-400 mt-1">
+                {p.conference}
+              </div>
+            )}
             {/* 링크 */}
             {p.link && (
               <a
