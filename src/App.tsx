@@ -104,10 +104,15 @@ const TALKS = [
 ];
 
 const UPCOMINGTALKS = [
-{
-    when: "",
-    where: "",
-    title: "",
+  {
+    when: "Jun 22–25, 2026",
+    where: "International Conference for the 80th Anniversary of the Korean Mathematical Society",
+    title: "The optimal chromatic bound for (even-hole, P<sub>7</sub>)-free graphs",
+  },
+  {
+    when: "Aug 24–28, 2026",
+    where: "ASIACOMB 2026",
+    title: "Algorithmic Applications of Reduced Component Max-Leaf",
   },
 ];
 
