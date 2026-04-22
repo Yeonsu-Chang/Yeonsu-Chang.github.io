@@ -15,9 +15,11 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Mail, FileText, ExternalLink, Menu } from "lucide-react";
 
+const ASSET_BASE = import.meta.env.BASE_URL;
+
 const LINKS = {
   email: "mailto:yeonsu@hanyang.ac.kr",
-  cv: "/Yeonsu_CV.pdf", // public/Yeonsu_CV.pdf 에 파일 넣어두기
+  cv: `${ASSET_BASE}Yeonsu_CV.pdf`, // public/Yeonsu_CV.pdf 에 파일 넣어두기
   googlescholar: "https://scholar.google.com/citations?user=mZcGOwIAAAAJ&hl=ko"
 };
 
@@ -290,7 +292,7 @@ export default function App() {
                   {/* 16:9 비율 고정 */}
                   <div className="relative w-full h-80 lg:h-96 rounded-xl bg-slate-100">
                     <img
-                      src="/profile.jpg"    // public/profile.jpg 에 사진 넣으면 자동 표시됨
+                      src={`${ASSET_BASE}profile.jpg`}    // public/profile.jpg 에 사진 넣으면 자동 표시됨
                       alt="Profile"
                       className="absolute inset-0 h-full w-full object-cover"
                       onError={(e) => {
