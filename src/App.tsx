@@ -292,7 +292,7 @@ export default function App() {
                   {/* 16:9 비율 고정 */}
                   <div className="relative w-full h-80 lg:h-96 rounded-xl bg-slate-100">
                     <img
-                      src={`${ASSET_BASE}profile.jpg`}    // public/profile.jpg 에 사진 넣으면 자동 표시됨
+                      src={`${ASSET_BASE}profile.png`}    // public/profile.png 에 사진 넣으면 자동 표시됨
                       alt="Profile"
                       className="absolute inset-0 h-full w-full object-cover"
                       onError={(e) => {
