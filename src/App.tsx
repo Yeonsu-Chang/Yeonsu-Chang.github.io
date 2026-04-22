@@ -74,19 +74,19 @@ const CONF = [
 const PREPRINTS = [
   {
     authors:
+      "Yeonsu Chang, Shenwei Huang, and Yidong Zhou",
+    title:
+      "The optimal chromatic bound for even-hole-free graphs without induced seven-vertex paths",
+    venue: "",
+    link: "https://doi.org/10.48550/arXiv.2602.04403",
+  },
+  {
+    authors:
       "Édouard Bonnet, Yeonsu Chang, Julien Duron, Colin Geniet, and O-joung Kwon",
     title:
       "Moderately beyond clique-width: reduced component max-leaf and related parameters",
     venue: "",
     link: "https://doi.org/10.48550/arXiv.2604.19138",
-  },
-  {
-    authors:
-      "Shenwei Huang, Yidong Zhou, and Yeonsu Chang",
-    title:
-      "The optimal chromatic bound for even-hole-free graphs without induced seven-vertex paths",
-    venue: "",
-    link: "https://doi.org/10.48550/arXiv.2602.04403",
   },
 ];
 
