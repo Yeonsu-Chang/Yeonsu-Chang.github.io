@@ -69,6 +69,14 @@ const CONF = [
     venue: "AAAI 2025 (accepted)",
     link: "https://doi.org/10.48550/arXiv.2408.09591",
   },
+  {
+    authors:
+      "Édouard Bonnet, Yeonsu Chang, Julien Duron, Colin Geniet, and O-joung Kwon",
+    title:
+      "Moderately beyond clique-width: reduced component max-leaf and related parameters",
+    venue: "ESA 2026 (accepted)",
+    link: "https://doi.org/10.48550/arXiv.2604.19138",
+  },
 ];
 
 const PREPRINTS = [
@@ -80,17 +88,14 @@ const PREPRINTS = [
     venue: "",
     link: "https://doi.org/10.48550/arXiv.2602.04403",
   },
-  {
-    authors:
-      "Édouard Bonnet, Yeonsu Chang, Julien Duron, Colin Geniet, and O-joung Kwon",
-    title:
-      "Moderately beyond clique-width: reduced component max-leaf and related parameters",
-    venue: "",
-    link: "https://doi.org/10.48550/arXiv.2604.19138",
-  },
 ];
 
 const TALKS = [
+  {
+    when: "Jun 22–25, 2026",
+    where: "International Conference for the 80th Anniversary of the Korean Mathematical Society",
+    title: "The optimal chromatic bound for (even-hole, P₇)-free graphs",
+  },
   {
     when: "Feb 2-6, 2026",
     where: "Korean Student Combinatorics Workshop 2026 Winter (KSCW2026W)",
@@ -114,11 +119,6 @@ const TALKS = [
 ];
 
 const UPCOMINGTALKS = [
-  {
-    when: "Jun 22–25, 2026",
-    where: "International Conference for the 80th Anniversary of the Korean Mathematical Society",
-    title: "The optimal chromatic bound for (even-hole, P₇)-free graphs",
-  },
   {
     when: "Aug 24–28, 2026",
     where: "ASIACOMB 2026",
