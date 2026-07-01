@@ -33,11 +33,12 @@ const PROFILE = {
     "Graph Theory",
     "Structural Graph Theory",
     "Parameterized Complexity",
+    "Sparsity",
     "Reduced Parameter",
   ],
   advisor: "O-joung Kwon",
   advisorUrl: "http://ojkwon.com",
-  updated: "CV Updated: April 22, 2026",
+  updated: "CV Updated: July 2, 2026",
 };
 
 const JOURNAL = [
@@ -375,7 +376,7 @@ export default function App() {
                 <ul className="flex flex-wrap gap-1.5 text-[13px] text-slate-700">
                   {[
                     "Structural Graph Theory","Parameterized Complexity",
-                    "Reduced Parameter","Chiboundedness"
+                    "Sparsity","Reduced Parameter","Chiboundedness"
                   ].map((t, i) => (
                     <li key={t} className="after:mx-1 after:text-slate-300 after:content-['•'] last:after:content-['']">
                       {t}
