@@ -58,18 +58,19 @@ const JOURNAL = [
     link: "https://doi.org/10.48550/arXiv.2306.15206",
     note: "114366",
   },
-  
-];
-
-const CONF = [
   {
     authors:
       "Shinwoo An, Yeonsu Chang, Kyungjin Cho, O-joung Kwon, Myounghwan Lee, Eunjin Oh, and Hyeonjun Shin",
     title:
       "Pre-assignment problem for unique minimum vertex cover on bounded clique-width graphs",
-    venue: "AAAI 2025 (accepted)",
+    venue: "Theoretical Computer Sciences (accepted)",
+    conference: "AAAI 2025 (accepted)",
     link: "https://doi.org/10.48550/arXiv.2408.09591",
   },
+  
+];
+
+const CONF = [
   {
     authors:
       "Édouard Bonnet, Yeonsu Chang, Julien Duron, Colin Geniet, and O-joung Kwon",
