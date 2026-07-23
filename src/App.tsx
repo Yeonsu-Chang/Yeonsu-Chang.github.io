@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
-import { Badge } from "@/components/ui/badge";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -25,7 +24,7 @@ const LINKS = {
 
 const PROFILE = {
   name: "Yeonsu Chang (장연수)",
-  title: "Integrated Ph.D Candidate",
+  title: "Integrated Ph.D. Candidate",
   dept: "Department of Mathematics, Hanyang University",
   location: "Room 735, Building 507, Hanyang University, 222, Wangsimni-ro, Seongdong-gu, Seoul, 04763, Republic of Korea",
   locationUrl: "https://maps.app.goo.gl/mmicVHMCk4f92bmN8",
@@ -48,6 +47,7 @@ const JOURNAL = [
     venue: "Discrete Applied Mathematics 380",
     date: "Feb, 2026",
     conference: "WG23 (accepted)",
+    journalLink: "https://doi.org/10.1016/j.dam.2025.10.056",
     link: "https://doi.org/10.48550/arXiv.2302.04624",
   },
   {
@@ -55,6 +55,7 @@ const JOURNAL = [
     title: "A characterization of graphs of radius-r flip-width at most 2",
     venue: "Discrete Mathematics 348(4)",
     date: "Apr, 2025",
+    journalLink: "https://doi.org/10.1016/j.disc.2024.114366",
     link: "https://doi.org/10.48550/arXiv.2306.15206",
     note: "114366",
   },
@@ -63,8 +64,9 @@ const JOURNAL = [
       "Shinwoo An, Yeonsu Chang, Kyungjin Cho, O-joung Kwon, Myounghwan Lee, Eunjin Oh, and Hyeonjun Shin",
     title:
       "Pre-assignment problem for unique minimum vertex cover on bounded clique-width graphs",
-    venue: "Theoretical Computer Sciences (accepted)",
+    venue: "Theoretical Computer Science (accepted)",
     conference: "AAAI 2025 (accepted)",
+    journalLink: "https://doi.org/10.1016/j.tcs.2026.116173",
     link: "https://doi.org/10.48550/arXiv.2408.09591",
   },
   
@@ -128,58 +130,30 @@ const UPCOMINGTALKS = [
   },
 ];
 
-function Publication({ p }: { p: any }) {
-  // 본인 이름 하이라이트
-  const highlightAuthor = (authors: string) => {
-    return authors.split(/(Yeonsu Chang)/g).map((part, i) =>
-      part === "Yeonsu Chang" ? (
-        <span key={i} className="font-semibold text-slate-800">
-          {part}
-        </span>
-      ) : (
-        part
-      )
-    );
-  };
+type PublicationData = {
+  authors: string;
+  title: string;
+  venue?: string;
+  date?: string;
+  conference?: string;
+  journalLink?: string;
+  link?: string;
+};
 
-  return (
-    <div className="mb-4">
-      {/* 제목 */}
-      <div className="font-medium text-slate-800">{p.title}</div>
-      {/* 저자 (내 이름만 진하게) */}
-      <div className="text-sm text-slate-600 mb-1">{highlightAuthor(p.authors)}</div>
-      {/* venue */}
-      <div className="text-sm text-slate-500 italic">
-        {p.venue}
-        {p.date ? `, ${p.date}` : ""}
-      </div>
-      <div className="text-sm text-slate-500 italic">
-        {p.conference}
-      </div>
-      {/* 링크 (문자 그대로, 검정색) */}
-      {p.link && (
-        <a
-          href={p.link}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-1 inline-block text-sm text-black underline hover:text-gray-700"
-        >
-          {p.link}
-        </a>
-      )}
-    </div>
-  );
+function getPublicationLinkLabel(link: string) {
+  if (link.toLowerCase().includes("arxiv")) return "arXiv";
+  if (link.includes("doi.org")) return "DOI";
+  return "Paper";
 }
 
-
-function PublicationList({ papers }: { papers: any[] }) {
+function PublicationList({ papers }: { papers: PublicationData[] }) {
   const total = papers.length;
   return (
     <div>
       {papers.map((p, i) => {
         const num = total - i; // 역순 번호
         return (
-          <div key={i} className="mb-4">
+          <div key={p.title} className="mb-4">
             {/* 번호 + 제목 */}
             <div className="font-medium text-slate-800">
               [{num}] {p.title}
@@ -206,16 +180,30 @@ function PublicationList({ papers }: { papers: any[] }) {
               {p.conference}
             </div>
             {/* 링크 */}
-            {p.link && (
-              <a
-                href={p.link}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-1 inline-block text-sm text-black underline hover:text-gray-700"
-              >
-                {p.link}
-              </a>
-            )}
+            <div className="mt-2 flex flex-wrap items-center gap-3">
+              {p.journalLink && (
+                <a
+                  href={p.journalLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-blue-700 underline-offset-4 hover:underline"
+                >
+                  Journal
+                  <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                </a>
+              )}
+              {p.link && (
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-blue-700 underline-offset-4 hover:underline"
+                >
+                  {getPublicationLinkLabel(p.link)}
+                  <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                </a>
+              )}
+            </div>
           </div>
         );
       })}
@@ -302,7 +290,7 @@ export default function App() {
                   {/* 16:9 비율 고정 */}
                   <div className="relative w-full h-80 lg:h-96 rounded-xl bg-slate-100">
                     <img
-                      src={`${ASSET_BASE}profile.png`}    // public/profile.png 에 사진 넣으면 자동 표시됨
+                      src={`${ASSET_BASE}profile.jpg`}    // public/profile.jpg 에 사진 넣으면 자동 표시됨
                       alt="Profile"
                       className="absolute inset-0 h-full w-full object-cover"
                       onError={(e) => {
@@ -333,7 +321,7 @@ export default function App() {
               <CardContent className="text-sm">
                 <div className="leading-relaxed text-slate-700">
                   Hello, I'm Yeonsu Chang (장연수). 
-                  I am an Integrated Ph.D student in mathematics at Hanyang University advised by {PROFILE.advisor}. 
+                  I am an Integrated Ph.D. student in mathematics at Hanyang University advised by {PROFILE.advisor}. 
                   My research interests lie in structural graph theory and parameterized algorithms. 
                   In particular, my current research focuses on problems related to reduced parameters and &chi;-boundedness.
                 </div>
@@ -377,8 +365,8 @@ export default function App() {
                 <ul className="flex flex-wrap gap-1.5 text-[13px] text-slate-700">
                   {[
                     "Structural Graph Theory","Parameterized Complexity",
-                    "Sparsity","Reduced Parameter","Chiboundedness"
-                  ].map((t, i) => (
+                    "Sparsity","Reduced Parameter","χ-boundedness"
+                  ].map((t) => (
                     <li key={t} className="after:mx-1 after:text-slate-300 after:content-['•'] last:after:content-['']">
                       {t}
                     </li>
@@ -417,7 +405,7 @@ export default function App() {
                 <div className="font-semibold">Education</div>
                 <ul className="list-disc pl-5">
                   <li>
-                    <div>Integrated Ph.D in Mathematics, Hanyang University</div>
+                    <div>Integrated Ph.D. in Mathematics, Hanyang University</div>
                     <div className="text-slate-500 text-sm">Mar 2022 – Present</div>
                   </li>
                   <li>
