@@ -128,6 +128,11 @@ const UPCOMINGTALKS = [
     where: "ASIACOMB 2026",
     title: "Algorithmic Applications of Reduced Component Max-Leaf",
   },
+  {
+    when: "Aug 31- Sep 2, 2026",
+    where: "ESA 2026",
+    title: "Moderately beyond clique-width: reduced component max-leaf and related parameters",
+  },
 ];
 
 type PublicationData = {
@@ -323,7 +328,8 @@ export default function App() {
                   Hello, I'm Yeonsu Chang (장연수). 
                   I am an Integrated Ph.D. student in mathematics at Hanyang University advised by {PROFILE.advisor}. 
                   My research interests lie in structural graph theory and parameterized algorithms. 
-                  In particular, my current research focuses on problems related to reduced parameters and &chi;-boundedness.
+                  In particular, my current research focuses on reduced parameters. 
+                  I am currently working primarily on the algorithmic and structural aspects of Reduced Component Max-Leaf.
                 </div>
 
                 <Separator className="my-4" />
