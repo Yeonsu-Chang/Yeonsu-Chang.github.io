@@ -37,15 +37,26 @@ const PROFILE = {
   ],
   advisor: "O-joung Kwon",
   advisorUrl: "http://ojkwon.com",
-  updated: "CV Updated: July 2, 2026",
+  updated: "CV Updated: July 28, 2026",
 };
 
 const JOURNAL = [
   {
+    authors:
+      "Shinwoo An, Yeonsu Chang, Kyungjin Cho, O-joung Kwon, Myounghwan Lee, Eunjin Oh, and Hyeonjun Shin",
+    title:
+      "Pre-assignment problem for unique minimum vertex cover on bounded clique-width graphs",
+    venue: "Theoretical Computer Science 1084, 116173",
+    date: "(Sep, 2026)",
+    conference: "AAAI 2025 (accepted)",
+    journalLink: "https://doi.org/10.1016/j.tcs.2026.116173",
+    link: "https://doi.org/10.48550/arXiv.2408.09591",
+  },
+  {
     authors: "Yeonsu Chang, O-joung Kwon, and Myounghwan Lee",
     title: "A new width parameter of graphs based on edge cuts: α-edge-crossing width",
     venue: "Discrete Applied Mathematics 380",
-    date: "Feb, 2026",
+    date: "(Feb, 2026)",
     conference: "WG23 (accepted)",
     journalLink: "https://doi.org/10.1016/j.dam.2025.10.056",
     link: "https://doi.org/10.48550/arXiv.2302.04624",
@@ -54,20 +65,10 @@ const JOURNAL = [
     authors: "Yeonsu Chang, Sejin Ko, O-joung Kwon, and Myounghwan Lee",
     title: "A characterization of graphs of radius-r flip-width at most 2",
     venue: "Discrete Mathematics 348(4)",
-    date: "Apr, 2025",
+    date: "(Apr, 2025)",
     journalLink: "https://doi.org/10.1016/j.disc.2024.114366",
     link: "https://doi.org/10.48550/arXiv.2306.15206",
     note: "114366",
-  },
-  {
-    authors:
-      "Shinwoo An, Yeonsu Chang, Kyungjin Cho, O-joung Kwon, Myounghwan Lee, Eunjin Oh, and Hyeonjun Shin",
-    title:
-      "Pre-assignment problem for unique minimum vertex cover on bounded clique-width graphs",
-    venue: "Theoretical Computer Science (accepted)",
-    conference: "AAAI 2025 (accepted)",
-    journalLink: "https://doi.org/10.1016/j.tcs.2026.116173",
-    link: "https://doi.org/10.48550/arXiv.2408.09591",
   },
   
 ];
