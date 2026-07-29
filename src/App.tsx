@@ -37,7 +37,7 @@ const PROFILE = {
   ],
   advisor: "O-joung Kwon",
   advisorUrl: "http://ojkwon.com",
-  updated: "CV Updated: July 28, 2026",
+  updated: "CV Updated: July 29, 2026",
 };
 
 const JOURNAL = [
