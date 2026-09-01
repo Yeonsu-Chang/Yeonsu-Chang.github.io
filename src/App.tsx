@@ -37,7 +37,7 @@ const PROFILE = {
   ],
   advisor: "O-joung Kwon",
   advisorUrl: "http://ojkwon.com",
-  updated: "CV Updated: July 29, 2026",
+  updated: "CV Updated: September 1, 2026",
 };
 
 const JOURNAL = [
@@ -97,6 +97,16 @@ const PREPRINTS = [
 
 const TALKS = [
   {
+    when: "Aug 31- Sep 2, 2026",
+    where: "ESA 2026",
+    title: "Moderately beyond clique-width: reduced component max-leaf and related parameters",
+  },
+  {
+    when: "Aug 24–28, 2026",
+    where: "ASIACOMB 2026",
+    title: "Algorithmic Applications of Reduced Component Max-Leaf",
+  },
+  {
     when: "Jun 22–25, 2026",
     where: "International Conference for the 80th Anniversary of the Korean Mathematical Society",
     title: "The optimal chromatic bound for (even-hole, P₇)-free graphs",
@@ -123,18 +133,7 @@ const TALKS = [
   },
 ];
 
-const UPCOMINGTALKS = [
-  {
-    when: "Aug 24–28, 2026",
-    where: "ASIACOMB 2026",
-    title: "Algorithmic Applications of Reduced Component Max-Leaf",
-  },
-  {
-    when: "Aug 31- Sep 2, 2026",
-    where: "ESA 2026",
-    title: "Moderately beyond clique-width: reduced component max-leaf and related parameters",
-  },
-];
+const UPCOMINGTALKS: typeof TALKS = [];
 
 type PublicationData = {
   authors: string;
@@ -528,20 +527,22 @@ export default function App() {
               </CardContent>
             </Card>
 
-            <Card className="mt-6">
-              <CardHeader>
-                <CardTitle>Upcoming talks</CardTitle>
-              </CardHeader>
-              <CardContent>
-                {UPCOMINGTALKS.map((t, i) => (
-                  <li key={i} className="mb-3 text-sm">
-                    <div className="font-medium">{t.where}</div>
-                    <div className="text-slate-600">{t.when}</div>
-                    <div>{t.title}</div>
-                  </li>
-                ))}
-              </CardContent>
-            </Card>
+            {UPCOMINGTALKS.length > 0 && (
+              <Card className="mt-6">
+                <CardHeader>
+                  <CardTitle>Upcoming talks</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  {UPCOMINGTALKS.map((t, i) => (
+                    <li key={i} className="mb-3 text-sm">
+                      <div className="font-medium">{t.where}</div>
+                      <div className="text-slate-600">{t.when}</div>
+                      <div>{t.title}</div>
+                    </li>
+                  ))}
+                </CardContent>
+              </Card>
+            )}
           </TabsContent>
         </Tabs>
       </main>
