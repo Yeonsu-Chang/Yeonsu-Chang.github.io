@@ -87,6 +87,14 @@ const CONF = [
 const PREPRINTS = [
   {
     authors:
+      "Édouard Bonnet and Yeonsu Chang",
+    title:
+      "Max Independent Set Remains NP-hard when Excluding a Planar Induced Minor",
+    venue: "",
+    link: "https://doi.org/10.48550/arXiv.2609.11285",
+  },
+  {
+    authors:
       "Yeonsu Chang, Shenwei Huang, and Yidong Zhou",
     title:
       "The optimal chromatic bound for even-hole-free graphs without induced seven-vertex paths",
