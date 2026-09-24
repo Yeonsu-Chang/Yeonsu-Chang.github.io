@@ -289,11 +289,12 @@ export default function App() {
       {/* Main */}
       <main className="mx-auto max-w-6xl px-5 py-8">
         <Tabs defaultValue="home">
-          <TabsList className="grid w-full grid-cols-4">
+          <TabsList className="grid w-full grid-cols-5">
             <TabsTrigger value="home" className="text-black hover:text-black hover:scale-105 transition transform data-[state=active]:text-blue-600 data-[state=active]:font-bold">Home</TabsTrigger>
             <TabsTrigger value="about" className="text-black hover:text-black hover:scale-105 transition transform data-[state=active]:text-blue-600 data-[state=active]:font-bold">About me</TabsTrigger>
             <TabsTrigger value="papers" className="text-black hover:text-black hover:scale-105 transition transform data-[state=active]:text-blue-600 data-[state=active]:font-bold">Papers</TabsTrigger>
             <TabsTrigger value="talks" className="text-black hover:text-black hover:scale-105 transition transform data-[state=active]:text-blue-600 data-[state=active]:font-bold">Talks</TabsTrigger>
+            <TabsTrigger value="service" className="text-black hover:text-black hover:scale-105 transition transform data-[state=active]:text-blue-600 data-[state=active]:font-bold">Service</TabsTrigger>
           </TabsList>
 
           {/* HOME */}
@@ -556,6 +557,35 @@ export default function App() {
                 </CardContent>
               </Card>
             )}
+          </TabsContent>
+
+          {/* SERVICE */}
+          <TabsContent value="service" className="mt-6 grid gap-6 lg:grid-cols-2">
+            <Card>
+              <CardHeader>
+                <CardTitle>Academic Service</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc pl-5 text-sm">
+                  <li>
+                    Co-organizing 2026 Korean Student Combinatorics Workshop
+                    (KSCW 2026, 2026 조합론 학생 워크샵)
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Peer Review Activities</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="list-disc space-y-2 pl-5 text-sm">
+                  <li>Journal of Combinatorial Theory, Series B (2026)</li>
+                  <li>WG 2026</li>
+                </ul>
+              </CardContent>
+            </Card>
           </TabsContent>
         </Tabs>
       </main>
