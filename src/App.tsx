@@ -37,7 +37,7 @@ const PROFILE = {
   ],
   advisor: "O-joung Kwon",
   advisorUrl: "http://ojkwon.com",
-  updated: "CV Updated: September 1, 2026",
+  updated: "CV Updated: September 24, 2026",
 };
 
 const JOURNAL = [
@@ -104,6 +104,11 @@ const PREPRINTS = [
 ];
 
 const TALKS = [
+  {
+    when: "Sep 24, 2026",
+    where: "MC2 Seminar at ENS de Lyon",
+    title: "Reduced Component Max-Leaf: Applications and Further Results",
+  },
   {
     when: "Aug 31- Sep 2, 2026",
     where: "ESA 2026",
