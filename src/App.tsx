@@ -566,10 +566,23 @@ export default function App() {
                 <CardTitle>Academic Service</CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="list-disc pl-5 text-sm">
-                  <li>
-                    Co-organizing 2026 Korean Student Combinatorics Workshop
-                    (KSCW 2026, 2026 조합론 학생 워크샵)
+                <ul className="text-sm">
+                  <li className="grid gap-1 sm:grid-cols-[7rem_1fr] sm:gap-3">
+                    <span className="font-medium text-slate-500">Co-organizing</span>
+                    <div>
+                      <a
+                        href="https://kscw.combinatorics.kr/2026/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1 font-medium text-blue-700 underline-offset-4 hover:underline"
+                      >
+                        2026 Korean Student Combinatorics Workshop
+                        <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                      </a>
+                      <div className="mt-0.5 text-slate-500">
+                        KSCW 2026 · 2026 조합론 학생 워크샵
+                      </div>
+                    </div>
                   </li>
                 </ul>
               </CardContent>
