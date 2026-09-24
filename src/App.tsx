@@ -603,8 +603,10 @@ export default function App() {
         </Tabs>
       </main>
 
-      <footer className="py-10 text-center text-xs text-slate-500">
-        © {new Date().getFullYear()} {PROFILE.name}.
+      <footer className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 py-10 text-center text-xs text-slate-500">
+        <span>© {new Date().getFullYear()} {PROFILE.name}.</span>
+        <span aria-hidden="true">·</span>
+        <span>Last update: September 25, 2026</span>
       </footer>
     </div>
   );
