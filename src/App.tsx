@@ -604,7 +604,7 @@ export default function App() {
       </main>
 
       <footer className="py-10 text-center text-xs text-slate-500">
-        © {new Date().getFullYear()} {PROFILE.name}. Built with React + Tailwind.
+        © {new Date().getFullYear()} {PROFILE.name}.
       </footer>
     </div>
   );
