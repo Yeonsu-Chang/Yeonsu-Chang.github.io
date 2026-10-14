@@ -89,6 +89,14 @@ const PREPRINTS = [
     authors:
       "Édouard Bonnet and Yeonsu Chang",
     title:
+      "QPTAS for Max Weight Independent Set in Graphs with Strongly Edge-Sublinear Separators",
+    venue: "",
+    link: "https://doi.org/10.48550/arXiv.2610.16025",
+  },
+  {
+    authors:
+      "Édouard Bonnet and Yeonsu Chang",
+    title:
       "Max Independent Set Remains NP-hard when Excluding a Planar Induced Minor",
     venue: "",
     link: "https://doi.org/10.48550/arXiv.2609.11285",
