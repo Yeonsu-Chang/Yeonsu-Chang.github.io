@@ -37,7 +37,7 @@ const PROFILE = {
   ],
   advisor: "O-joung Kwon",
   advisorUrl: "http://ojkwon.com",
-  updated: "CV Updated: September 24, 2026",
+  updated: "CV Updated: October 14, 2026",
 };
 
 const JOURNAL = [
@@ -614,7 +614,7 @@ export default function App() {
       <footer className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 py-10 text-center text-xs text-slate-500">
         <span>© {new Date().getFullYear()} {PROFILE.name}.</span>
         <span aria-hidden="true">·</span>
-        <span>Last update: September 25, 2026</span>
+        <span>Last update: October 14, 2026</span>
       </footer>
     </div>
   );
