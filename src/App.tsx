@@ -22,6 +22,22 @@ const LINKS = {
   googlescholar: "https://scholar.google.com/citations?user=mZcGOwIAAAAJ&hl=ko"
 };
 
+const AUTHOR_LINKS: Record<string, string> = {
+  "Shinwoo An": "https://www.shinwooan.com",
+  "Kyungjin Cho": "https://jkj8944.github.io/",
+  "O-joung Kwon": "https://ojkwon.com/",
+  "Myounghwan Lee": "https://myounghwanlee.super.site",
+  "Eunjin Oh": "https://sites.google.com/view/eunjinoh/",
+  "Hyeonjun Shin": "https://sites.google.com/view/hyeonjun-shin",
+  "Édouard Bonnet": "https://perso.ens-lyon.fr/edouard.bonnet/",
+  "Colin Geniet": "https://colingeniet.com/",
+};
+
+const AUTHOR_NAME_PATTERN = new RegExp(
+  `(${[...Object.keys(AUTHOR_LINKS), "Yeonsu Chang"].join("|")})`,
+  "g",
+);
+
 const PROFILE = {
   name: "Yeonsu Chang (장연수)",
   title: "Integrated Ph.D. Candidate",
@@ -172,6 +188,31 @@ function getPublicationLinkLabel(link: string) {
   return "Paper";
 }
 
+function PublicationAuthors({ authors }: { authors: string }) {
+  return authors.split(AUTHOR_NAME_PATTERN).map((part, index) => {
+    if (part === "Yeonsu Chang") {
+      return <span key={index} className="text-black">{part}</span>;
+    }
+
+    const authorLink = AUTHOR_LINKS[part];
+    if (authorLink) {
+      return (
+        <a
+          key={index}
+          href={authorLink}
+          target="_blank"
+          rel="noreferrer"
+          className="underline decoration-slate-300 underline-offset-2 transition-colors hover:text-blue-700"
+        >
+          {part}
+        </a>
+      );
+    }
+
+    return part;
+  });
+}
+
 function PublicationList({ papers }: { papers: PublicationData[] }) {
   const total = papers.length;
   return (
@@ -186,15 +227,7 @@ function PublicationList({ papers }: { papers: PublicationData[] }) {
             </div>
             {/* 저자 (내 이름만 검정색) */}
             <div className="text-sm text-slate-600 mb-1">
-              {p.authors.split(/(Yeonsu Chang)/g).map((part: string, j: number) =>
-                part === "Yeonsu Chang" ? (
-                  <span key={j} className="text-black">
-                    {part}
-                  </span>
-                ) : (
-                  part
-                )
-              )}
+              <PublicationAuthors authors={p.authors} />
             </div>
             {/* venue */}
             <div className="text-sm text-slate-500 italic">
@@ -614,7 +647,7 @@ export default function App() {
       <footer className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 py-10 text-center text-xs text-slate-500">
         <span>© {new Date().getFullYear()} {PROFILE.name}.</span>
         <span aria-hidden="true">·</span>
-        <span>Last update: October 14, 2026</span>
+        <span>Last update: October 15, 2026</span>
       </footer>
     </div>
   );
